@@ -1,0 +1,20 @@
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top .img {
+  width: 28Px;
+  height: 21Px;
+}
+.top .right .img {
+  margin-right: 15Px;
+}
+.top .right .left .img {
+  margin-left: 15Px;
+}

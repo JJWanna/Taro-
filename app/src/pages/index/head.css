@@ -1,0 +1,5 @@
+.head .back {
+  width: 100%;
+  height: 150Px;
+  filter: blur(10Px);
+}

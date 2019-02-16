@@ -1,0 +1,31 @@
+.head .back {
+  width: 100%;
+  height: 150Px;
+  filter: blur(2Px);
+}
+.head .store {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20Px;
+  margin-top: -90Px;
+}
+.head .store .store_img {
+  width: 80Px;
+  height: 80Px;
+  border-radius: 6Px;
+}
+.head .store .store_text {
+  margin-left: 10Px;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 8Px;
+}
+.head .store .store_text .tags_text {
+  border: 1Px solid greenyellow;
+  padding: 2Px 4Px;
+  font-size: 12Px;
+  border-radius: 6Px;
+  margin-left: 10Px;
+}
