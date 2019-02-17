@@ -21,23 +21,26 @@ class Cata extends Component {
         if( nextState.selectCata === this.state.selectCata ) {
             return 
         } else {
-            console.log('aa')
+            //做一些逻辑运算
         }
     }
 
     handleClcik(item) {
         let {selectCata} = this.state;
         if( selectCata !== item.id ) {
-            this.setState({selectCata: item.id})
-        } else {
-            return 
+            this.setState({selectCata: item.id},()=>{
+                this.props.onChangeCata(item)
+            })
+        } else if(!this.state.selectCata) {
+            this.setState({selectCata:item.id},()=>{
+                this.props.onChangeCata(item)
+            })
         }   
     }
 
 
     render () {
         let {selectCata} = this.state;
-        console.log(selectCata);
         return (<View className="cata">
             {this.state.cata.map((item,index) => {
                 return <Text onClick={this.handleClcik.bind(this,item)} className={"cata_title " + (selectCata==item.id ?  'select': null)} key={item.id}>{item.name}</Text>
