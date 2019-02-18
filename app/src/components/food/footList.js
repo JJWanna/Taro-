@@ -1,5 +1,6 @@
 import Taro, {Component} from '@tarojs/taro';
 import {View, Text,Image} from '@tarojs/components';
+import AddCata from '../AddCata/addCata';
 import './footList.less'
 class FootList extends Component {
     constructor(props){
@@ -21,6 +22,7 @@ class FootList extends Component {
                                 <Text>{item.title}</Text>
                                 <Text>月售：{item.sole}</Text>
                                 <Text className="price">¥：{item.price}</Text>
+                                <AddCata foot={item}/>
                             </View>
                         </View>)
                     })
