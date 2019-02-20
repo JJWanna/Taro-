@@ -22,7 +22,7 @@ class FootList extends Component {
                                 <Text>{item.title}</Text>
                                 <Text>月售：{item.sole}</Text>
                                 <Text className="price">¥：{item.price}</Text>
-                                <AddCata foot={item}/>
+                                <AddCata food={item}/>
                             </View>
                         </View>)
                     })

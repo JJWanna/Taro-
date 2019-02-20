@@ -8,17 +8,17 @@ class AddCata extends Component {
         this.state={
             num: 0
         }
-    }
+    }   
     componentDidMount(){
-        this.setState({num: getFoodCount(this.props.foot)})
+        this.setState({num: getFoodCount(this.props.food)})
     }
 
     //减
     handleJian(){
-        if(this.props.foot){
+        if(this.props.food){
             if(this.state.num>0){
                 setFoundCount(this.props.foot,this.state.num, "cut",()=>{
-                    this.setState({num: getFoodCount(this.props.foot)})
+                    this.setState({num: getFoodCount(this.props.food)})
                 });
             } else {
                 console.log("当前加减菜品出现异常")
@@ -26,10 +26,12 @@ class AddCata extends Component {
         } 
     }
     //加
-    handleJia(){
-        if(this.props.foot){
-            setFoundCount(this.props.foot,this.state.num, "Add",()=>{
-                this.setState({num: getFoodCount(this.props.foot)})
+    handleJia=()=>{
+        console.log('aa')
+        if(this.props.food){
+           
+            setFoundCount(this.props.food,this.state.num, "Add",()=>{
+                this.setState({num: getFoodCount(this.props.food)})
             });
         }
         
